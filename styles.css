@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&display=swap");
+
+:root {
+  --clr-light-gray: hsl(0, 0%, 81%);
+  --clr-light-grayish-blue: hsl(210, 46%, 95%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-v-dark-blackish-blue: hsl(219, 29%, 14%);
+  --clr-v-dark-grayish-blue: hsl(217, 19%, 35%);
+  --clr-mod-violet: hsl(263, 55%, 52%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  background-color: var(--clr-light-grayish-blue);
+  margin: auto;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.page-container {
+  max-width: 1440px;
+  margin: auto;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+}
+
+.grid-child {
+  padding: 1.8rem;
+  border-radius: 10px;
+  color: var(--clr-white);
+}
+
+.grid-child img {
+  border-radius: 50%;
+  object-fit: contain;
+  object-position: center;
+  border: solid 3px var(--clr-light-gray);
+  max-height: 60px;
+  overflow: hidden;
+}
+
+.grid-child > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.grid-child h2 {
+  margin: 1em 0;
+}
+
+.grid-child > p {
+  opacity: 70%;
+}
+
+.grid-child > div p {
+  opacity: 0.5;
+}
+
+.grid-child:nth-child(1) {
+  grid-column: span 2;
+  background-color: var(--clr-mod-violet);
+  background-image: url(./assets/bg-pattern-quotation.svg);
+  /* preview */
+  background-repeat: no-repeat;
+  background-position: 80% 0;
+}
+
+.grid-child:nth-child(2) {
+  background-color: var(--clr-v-dark-grayish-blue);
+}
+.grid-child:nth-child(3) {
+  grid-row: span 2;
+  background-color: var(--clr-white);
+  color: var(--clr-v-dark-grayish-blue);
+}
+.grid-child:nth-child(4) {
+  background-color: var(--clr-white);
+  color: var(--clr-v-dark-grayish-blue);
+}
+.grid-child:nth-child(5) {
+  grid-column: span 2;
+  background-color: var(--clr-v-dark-blackish-blue);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: unset;
+    grid-template-rows: 1fr;
+  }
+
+  .grid-child:nth-child(1),
+  .grid-child:nth-child(3),
+  .grid-child:nth-child(5) {
+    grid-column: unset;
+  }
+}
