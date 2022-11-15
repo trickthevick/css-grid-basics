@@ -6,7 +6,7 @@
 
 Grid system css papge design
 
-**[Visit Completed Page](https://github.com/urlgoeshere)**
+**[Visit Completed Page](https://trickthevick.github.io/css-grid-basics/)**
 
 # Front-end Style Guide
 
