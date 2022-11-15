@@ -1,6 +1,6 @@
 # Grid System Page Design.
 
-## ![ScreenShot]()
+## ![ScreenShot](./screenshot.jpg)
 
 ---
 
